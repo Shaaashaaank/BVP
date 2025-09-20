@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BVP Bee Chatbot</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      background: #f9f6f2;
+      margin: 0;
+      padding: 0;
+    }
+
+   /* Floating bee icon */
+#bee-icon {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  z-index: 1000;
+  border-radius: 50%;
+  overflow: visible; /* important for tooltip visibility */
+}
+
+#bee-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+#bee-icon:hover img {
+  transform: scale(1.1);
+}
+
+/* Tooltip */
+#bee-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 10px;
+  background: #6e1e2a;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: nowrap;
+  display: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+#bee-icon:hover #bee-tooltip {
+  display: block;
+}
+
+/* Chatbox */
+#chatbot {
+  position: fixed;
+  bottom: 120px;
+  right: 30px;
+  width: 340px;
+  background: #fff8f6; /* soft ivory */
+  border: 2px solid #6e1e2a;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(110, 30, 42, 0.3);
+  padding: 20px;
+  display: none;
+  z-index: 999;
+}
+
+#chatbot h3 {
+  margin-top: 0;
+  color: #6e1e2a;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#chatbot ul {
+  list-style: none;
+  padding: 0;
+}
+
+#chatbot li {
+  margin-bottom: 10px;
+}
+
+#chatbot button {
+  width: 100%;
+  padding: 10px;
+  background-color: #6e1e2a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+}
+
+#chatbot button:hover {
+  background-color: #4a121c;
+}
+
+/* Response area */
+#response {
+  margin-top: 20px;
+  background: #fbe9e7;
+  padding: 15px;
+  border-radius: 5px;
+  color: #4a121c;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+#response p {
+  margin: 0 0 10px;
+}
+
+#response a {
+  color: #b71c1c;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Close button */
+#close-chat {
+  position: absolute;
+  
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  color: #6e1e2a;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  height: 1px;
+  width: -1px;
+}
+
+#close-chat:hover {
+  color: #c0392b;
+}
+
+  </style>
+</head>
+<body>
+
+<!-- Floating Bee Icon -->
+<div id="bee-icon">
+  <div id="bee-tooltip">Hi! I am Bharati<br> How may I assist you?</div>
+  <img src="bharatichat.png" alt="Chatbot Bee" onclick="toggleChat()">
+</div>
+
+
+<!-- Chatbox -->
+<div id="chatbot">
+  <button id="close-chat" onclick="toggleChat()" style="height: fit-content; width: fit-content; margin-left: 80%;">✖</button>
+  <h3>BVP Support</h3>
+  <p>Select a question to get started:</p>
+  <ul>
+    <li><button onclick="respond(1)">🙋‍♀️How to volunteer in upcoming programs?</button></li>
+    <li><button onclick="respond(2)">📅Which program is currently going on?</button></li>
+    <li><button onclick="respond(3)">👥How to become a member?</button></li>
+    <li><button onclick="respond(4)">📝How to submit my project proposal?</button></li>
+    <li><button onclick="respond(5)">📞How to contact BVP?</button></li>
+  </ul>
+  <div id="response"></div>
+</div>
+
+<script>
+  function toggleChat() {
+    const chatbox = document.getElementById("chatbot");
+    chatbox.style.display = chatbox.style.display === "none" ? "block" : "none";
+  }
+
+  function respond(option) {
+    const links = {
+      1: "https://forms.gle/your-volunteer-form-link",
+      2: "https://bvp-programs.org/current-program",
+      3: "https://bvp-membership.org/join",
+      4: "https://bvp-projects.org/submit-proposal",
+      5: "https://bvp-contact.org/contact-us"
+    };
+
+    const messages = {
+      1: `<p>👐 <strong>Volunteer Opportunity:</strong><br>You can volunteer by filling out this form: <a href="${links[1]}" target="_blank">Volunteer Form</a></p>`,
+      2: `<p>📅 <strong>Current Program:</strong><br>Explore the ongoing program here: <a href="${links[2]}" target="_blank">Current Program</a></p>`,
+      3: `<p>👥 <strong>Membership Info:</strong><br>Become a member by visiting: <a href="${links[3]}" target="_blank">Membership Page</a></p>`,
+      4: `<p>📨 <strong>Project Proposal:</strong><br>Submit your proposal at: <a href="${links[4]}" target="_blank">Proposal Submission</a></p>`,
+      5: `<p>📞 <strong>Contact Us:</strong><br>Reach out to BVP through: <a href="${links[5]}" target="_blank">Contact Page</a></p>`
+    };
+
+    document.getElementById("response").innerHTML = messages[option];
+  }
+</script>
+
+</body>
+</html>
