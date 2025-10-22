@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharatiya Vidvat Parishat</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="cropped_circle_image.png">
+</head>
+
+<body>
+   <header class="header" style="background: linear-gradient(90deg, #2c2a4a, #bfa76f); color: #fff; border-bottom: 2px solid #a67c52;">
+    <div class="container" style="padding: 10px 0;">
+        <nav class="nav-container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+            <div class="logo-section" style="display: flex; align-items: center;">
+                <img src="cropped_circle_image.png" alt="BVP Logo" class="logo-img" >
+                <div class="logo-text">
+                    <h1 style="font-size: 2.5em; margin: 0; color: #fff;">Bharatiya Vidvat Parishat</h1>
+                    <p class="tagline" style="text-align: center; font-style: italic; color: #f0e6d2;">Preserving Knowledge, Inspiring Wisdom</p>
+                </div>
+            </div>
+                <script>window.addEventListener("scroll", function () {
+  const header = document.querySelector(".header");
+  header.classList.toggle("scrolled", window.scrollY > 50);
+});
+
+</script>
+<!-- Add this button inside the header, after the nav-container -->
+<div class="donation-cta-container">
+    <a href="donation.html" class="donation-cta-btn">
+        <span class="donation-icon">
+            
+        </span>
+        <span class="donation-text">Donate Now</span>
+        <div class="pulse-ring"></div>
+        <div class="pulse-ring-2"></div>
+    </a>
+</div>
+             <!-- Navigation Menu -->
+            <ul class="nav-menu" style="list-style: none; display: flex; gap: 15px; margin: 0; padding: 0;">
+                <li><a href="index.html" style="color: #fff; text-decoration: none;">Home</a></li>
+                <li><a href="#about" style="color: #fff; text-decoration: none;">About</a></li>
+                <li><a href="pgm.html" style="color: #fff; text-decoration: none;">Programs</a></li>
+                <li><a href="team.html" style="color: #fff; text-decoration: none;">Esteemed Members</a></li>
+                <li><a href="project.html" style="color: #fff; text-decoration: none;">Projects</a></li>
+                <li><a href="gallery.html" style="color: #fff; text-decoration: none;">Archives</a></li>
+                <li><a href="main.html" style="color: #fff; text-decoration: none;">Forum</a></li>
+                <li><a href="donation.html" style="color: #fff; text-decoration: none;">Support</a></li>
+                <li><a href="contact.html" style="color: #fff; text-decoration: none;">Contact</a></li>
+            </ul>
+                
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <!-- Hero Section -->
+<section id="home" class="hero" style="height: 10%; background: linear-gradient(135deg, #f3e9d2, #d8cbb3); position: relative; border-top: 3px solid #a67c52; border-bottom: 3px solid #a67c52; font-family: 'Georgia', serif; overflow: hidden;">
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const canvas = document.createElement("canvas");
+    const section = document.getElementById("home");
+    canvas.width = window.innerWidth;
+    canvas.height = section.offsetHeight;
+    canvas.style.position = "absolute";
+    canvas.style.top = "0";
+    canvas.style.left = "0";
+    canvas.style.zIndex = "0";
+    canvas.style.opacity = "0.10";
+    canvas.style.pointerEvents = "none"; // ensures no interference with clicks
+
+    const ctx = canvas.getContext("2d");
+    const words = ["ॐ", "विद्या", "शास्त्र:", "गुरु:", "प्रज्ञा", "वेद:", "तत्त्व:", "संवाद:","श्री"];
+
+    for (let i = 0; i < 300; i++) {
+      const word = words[Math.floor(Math.random() * words.length)];
+      const fontSize = Math.random() * 20 + 12;
+      ctx.font = `${fontSize}px 'Noto Serif Devanagari', serif`;
+      ctx.fillStyle = i % 2 === 0 ? "#1a120d" : "#0f0b08"; // deep scholarly tones
+      ctx.fillText(word, Math.random() * canvas.width, Math.random() * canvas.height);
+    }
+
+    section.appendChild(canvas);
+  });
+</script>
+
+
+  <div class="hero-background">
+    <div class="hero-overlay" style="background-color: rgba(255, 248, 230, 0.7); position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;"></div>
+  </div>
+        
+
+<!-- Registration Button with Poster Image -->
+<a href="https://bharati.bvparishat.in/" target="_blank" style="text-decoration: none;">
+  <div style="
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    margin-top: 7%;
+    background: linear-gradient(135deg, #8e2c2c, #5c1212);
+    color: #fff;
+    padding: 20px 22px;
+    border-radius: 28px;
+    font-family: 'Georgia', serif;
+    font-size: 15px;
+    font-weight: 500;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(200, 60, 30, 0.4);
+    border: 2px solid #ffffff;
+    z-index: 10;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    animation: pulse 2s infinite;
+  ">
+    <img src="bharati.jpg" alt="Bhāratī Registration Poster" style="width: 100%; height: auto; border-radius: 12px; margin-bottom: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border: 1px solid #fff;">
+    <div style="font-size: 13px; font-style: italic; line-height: 1.4;">
+<br>
+    </div>
+    <div style="margin-top: 12px; font-size: 15px; font-weight: bold; color: #ffe6e6;">Click here to Register Now!</div>
+  </div>
+</a>
+
+        <!-- Floating Bee Icon -->
+<div id="bee-icon">
+  <div id="bee-tooltip">Hi! I am Bharati<br> How may I assist you?</div>
+  <img src="bharatichat.png" alt="Chatbot Bee" onclick="toggleChat()">
+</div>
+
+<script>
+  const chatbot = document.getElementById("chatbot");
+let isDragging = false;
+let offsetX, offsetY;
+
+chatbot.addEventListener("mousedown", function (e) {
+  isDragging = true;
+  offsetX = e.clientX - chatbot.offsetLeft;
+  offsetY = e.clientY - chatbot.offsetTop;
+  chatbot.style.cursor = "move";
+});
+
+document.addEventListener("mousemove", function (e) {
+  if (isDragging) {
+    chatbot.style.left = e.clientX - offsetX + "px";
+    chatbot.style.top = e.clientY - offsetY + "px";
+  }
+});
+
+document.addEventListener("mouseup", function () {
+  isDragging = false;
+  chatbot.style.cursor = "default";
+});
+
+ function toggleChat() {
+    const chatbox = document.getElementById("chatbot");
+    chatbox.style.display = chatbox.style.display === "none" ? "block" : "none";
+  }
+
+  function respond(option) {
+    const links = {
+      1: "https://forms.gle/your-volunteer-form-link",
+      2: "pgm.html",
+      3: "donation.html",
+      4: "https://script.google.com/macros/s/AKfycbxj9IJ7A6ls7zhscuNhXaMp1xLsU7NjDa_A8HFFMHErQSAJG00Qji7bBT74N10B25SmnA/exec",
+      5: "https://script.google.com/macros/s/AKfycbzcTPULxr6pTBZTm_UFTk27oxADlQcwD9WostkUNwtTavAyTiBJs02IaDYEkIxKvbEw7Q/exec" 
+    };
+
+    const messages = {
+      1: `<p>👐 <strong>Volunteer Opportunity:</strong><br>You can volunteer by filling out this form: <a href="${links[1]}" target="_blank">Volunteer Form</a></p>`,
+      2: `<p>📅 <strong>Current Program:</strong><br>Explore the ongoing program here: <a href="${links[2]}" target="_blank">Current Program</a></p>`,
+      3: `<p>👥 <strong>Membership Info:</strong><br>Become a member by visiting: <a href="${links[3]}" target="_blank">Membership Page</a></p>`,
+      4: `<p>📨 <strong>Project Proposal:</strong><br>Submit your proposal at: <a href="${links[4]}" target="_blank">Proposal Submission</a></p>`,
+      5: `<p>📞 <strong>Contact Us:</strong><br>Reach out to BVP through: <a href="${links[5]}" target="_blank">Contact Page</a></p>`
+    };
+
+    document.getElementById("response").innerHTML = messages[option];
+  }</script>    
+
+<!-- Chatbox -->
+<div id="chatbot">
+  <button id="close-chat" onclick="toggleChat()" style="height: fit-content; width: fit-content; margin-left: 80%;">✖</button>
+  <h3>Hi! I am Bharati</h3>
+  <p>Select a question to get started:</p>
+  <ul>
+    <li><button onclick="respond(1)">🙋‍♀️How to volunteer in upcoming programs?</button></li>
+    <li><button onclick="respond(2)">📅Which program is currently going on?</button></li>
+    <li><button onclick="respond(3)">👥How to become a member?</button></li>
+    <li><button onclick="respond(4)">📝How to submit my project proposal?</button></li>
+    <li><button onclick="respond(5)">📞How to contact BVP?</button></li>
+  </ul>
+  <div id="response"></div>
+</div>
+
+        <div class="container" style="margin-top: 4%;">
+            <div class="hero-content">
+                <h1 class="hero-title" style="font-size: 2em;">Where India’s intellectual heritage meets her contemporaries!</h1>
+                <p class="hero-subtitle" style="font-family: 'Times New Roman', Times, serif;">Connecting seekers, scholars, and stewards of Indian knowledge.</p>
+                <div class="hero-stats" >
+                    <div class="stat-item">
+                        <span class="stat-number">2500+</span>
+                        <span class="stat-label">Global Scholars</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Years of Excellence</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">Conference Participants</span>
+                    </div>
+                </div>
+                <div class="cta-buttons">
+                    <a href="pgm.html" class="btn btn-primary">
+                        <i class="fas fa-graduation-cap"></i>
+                        Explore Programs
+                    </a>
+                    <a href="donation.html" class="btn btn-secondary">
+                        <i class="fas fa-heart"></i>
+                        Support Our Mission
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+<div id="imageModal" class="modal-overlay">
+    <!-- modal content here -->
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+    <!-- About Section -->
+<section id="about" class="section about" style="background: linear-gradient(135deg, #fdf6e3, #f5e9d4); padding: 60px 0; border-top: 2px solid #d2b48c; border-bottom: 2px solid #d2b48c;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 30px;">
+        <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+            <h2 class="section-title" style="font-size: 1.5em; color: #5c4b3b;">About Bharatiya Vidvat Parishat</h2>
+            <div class="section-divider" style="width: 60px; height: 3px; background-color: #a67c52; margin: 10px auto;"></div>
+        </div>
+
+        <div class="about-content" style="display: flex; flex-direction: column; gap: 40px;">
+            <div class="about-main" style="display: flex; flex-direction: column; gap: 30px;">
+                <div class="about-text" style="color: #3e2f23;">
+                    <p class="lead-paragraph" style="text-align: justify; font-size: 1.05em; line-height: 1.8;">
+                        Bharatiya Vidvat Parishat (BVP) stands as a distinguished trust dedicated to promoting research and studies in Indian Shastras. Since our establishment in 2009, we have cultivated a vibrant global community of scholars committed to preserving and advancing India's rich intellectual heritage.
+
+                        Our worldwide network encompasses over 2,500 members, including renowned Sanskrit scholars such as Mahamahopadhyaya Prof. Korada Subrahmanyam, Mahamahopadhyaya Prof. Ashok Aklujkar, Prof. Saroja Bhate, Prof. V.N. Jha, Prof. Nagaraj Paturi, and Prof. Nabanarayana Bandyopadhyaya, among other distinguished academicians.
+
+                        Our landmark achievement includes the successful organization of the decennial "Dispassionate Churning of Indology" conference in 2019, which brought together 350 participants from around the world in a celebration of scholarly discourse and intellectual exchange.
+                    </p>
+                </div>
+
+                <div class="about-highlights" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+                    <a href="team.html" class="card-link" target="_blank" style="text-decoration: none;">
+                        <div class="highlight-card" style="background-color: #fffaf0; border: 1px solid #e0d4b7; border-radius: 10px; padding: 20px; width: 280px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+                            <div class="highlight-icon" style="font-size: 2em; color: #a67c52;">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <h3 style="color: #5c4b3b;">Members</h3>
+                            <p style="color: #3e2f23;">Our distinguished members who guide the vision and mission of BVP</p>
+                        </div>
+                    </a>
+
+                    <a href="main.html" class="card-link" target="_blank" style="text-decoration: none;">
+                        <div class="highlight-card" style="background-color: #fffaf0; border: 1px solid #e0d4b7; border-radius: 10px; padding: 20px; width: 280px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+                            <div class="highlight-icon" style="font-size: 2em; color: #a67c52;">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <h3 style="color: #5c4b3b;">Global Network</h3>
+                            <p style="color: #3e2f23;">Connecting scholars and institutions across continents</p>
+                        </div>
+                    </a>
+
+                    <a href="https://aioc.bvparishat.in/themes-new-2/" class="card-link" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                        <div class="highlight-card" style="background-color: #fffaf0; border: 1px solid #e0d4b7; border-radius: 10px; padding: 20px; width: 280px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s ease;">
+                            <div class="highlight-icon" style="font-size: 2em; color: #a67c52;">
+                                <i class="fas fa-scroll"></i>
+                            </div>
+                            <h3 style="color: #5c4b3b;">Publications</h3>
+                            <p style="color: #3e2f23;">Safeguarding ancient texts and traditional methodologies</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Mission Section -->
+<section class="section mission" style="background: linear-gradient(135deg, #fef8e6, #f5e9d4); padding: 60px 0; border-top: 2px solid #d2b48c; border-bottom: 2px solid #d2b48c;">
+  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 30px;">
+    <div class="mission-content" style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center;">
+
+      <!-- Vision Card -->
+      <div class="mission-card" style="background-color: #fffaf0; border: 1px solid #e0d4b7; border-radius: 12px; padding: 35px; flex: 1 1 45%; box-shadow: 0 6px 18px rgba(0,0,0,0.08); font-size: 1.15em; line-height: 1.9;">
+        <div class="mission-icon" style="font-size: 2.2em; color: #a67c52; margin-bottom: 15px;">
+          <i class="fas fa-eye"></i>
+        </div>
+        <h3 style="color: #5c4b3b; font-size: 1.8em; margin-bottom: 15px;">Our Vision</h3>
+        <p style="text-align: justify; color: #3e2f23;">
+          To revitalize and advance the study of Bhāratīya Śāstra and Indology by fostering dialogue between traditional and modern scholars, integrating classical wisdom with contemporary methodologies, and cultivating a vibrant ecosystem for rigorous, interdisciplinary research.
+        </p>
+      </div>
+
+      <!-- Mission Card -->
+      <div class="mission-card" style="background-color: #fffaf0; border: 1px solid #e0d4b7; border-radius: 12px; padding: 35px; flex: 1 1 45%; box-shadow: 0 6px 18px rgba(0,0,0,0.08); font-size: 1.15em; line-height: 1.9;">
+        <div class="mission-icon" style="font-size: 2.2em; color: #a67c52; margin-bottom: 15px;">
+          <i class="fas fa-compass"></i>
+        </div>
+        <h3 style="color: #5c4b3b; font-size: 1.8em; margin-bottom: 15px;">Our Mission</h3>
+        <p style="text-align: justify; color: #3e2f23;">
+          <b>Preserving and Promoting Śāstric Traditions</b><br>
+          Supporting authentic scholarship rooted in Gurukula pedagogy and classical texts.<br>
+
+          <b>Encouraging Interdisciplinary Research</b><br>
+          Bridging traditional śāstra with modern disciplines—linguistics, philosophy, science, and technology.<br>
+
+          <b>Empowering Emerging Scholars</b><br>
+          Providing platforms for young researchers to present innovative ideas and engage with senior vidvans.<br>
+
+          <b>Integrating Digital Tools and Methods</b><br>
+          Advancing the use of ICT, computational linguistics, and digital humanities in Sanskrit and Indic studies.<br>
+
+          <b>Facilitating Scholarly Collaboration</b><br>
+          Organizing conferences, shāstrārthas, and panel discussions to foster intellectual exchange across traditions and geographies.
+        </p>
+      </div>
+
+      <!-- Commitment Card -->
+      <div class="mission-card full-width" style="background-color: #fffaf0; border: 1px solid #e0d4b7; border-radius: 12px; padding: 35px; width: 100%; max-width: 900px; box-shadow: 0 6px 18px rgba(0,0,0,0.08); font-size: 1.15em; line-height: 1.9;">
+        <div class="mission-icon" style="font-size: 2.2em; color: #a67c52; margin-bottom: 15px;">
+          <i class="fas fa-star"></i>
+        </div>
+        <h3 style="color: #5c4b3b; font-size: 1.8em; margin-bottom: 15px;">Our Commitment</h3>
+        <p style="text-align: justify; color: #3e2f23;">
+          Our commitment is to advance research and studies in Indian Shastras<br>
+          through global collaboration and scholarly exchange.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <h3>Bharatiya Vidvat Parishat</h3>
+                        <p>Where India's intellectual heritage meets contemporary scholarship</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=61566947941220" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://x.com/BVP_2025" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/bharatiya-vidwat-parishat-781703381/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://www.instagram.com/bvpprograms/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://youtube.com/@bharatiyavidwatparishatbangalo?si=SBZauZfY3qu4lH8W" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h4>Academic</h4>
+                            <ul>
+                                <li><a href="#about">About Us</a></li>
+                                <li><a href="pgm.html">Programs</a></li>
+                                <li><a href="project.html">Research</a></li>
+                                <li><a href="team.html">Faculty</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-column">
+                            <h4>Resources</h4>
+                            <ul>
+                                <li><a href="https://aioc.bvparishat.in/">AIOC</a></li>
+                                <li><a href="https://bharati.bvparishat.in/">Bharati Portal</a></li>
+                                <li><a href="#">Publications</a></li>
+                                <li><a href="gallery.html">Archives</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-column">
+                            <h4>Community</h4>
+                            <ul>
+                                <li><a href="main.html">Discussion Forum</a></li>
+                                <li><a href="#">Events</a></li>
+                                <li><a href="#">Membership</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-column">
+                            <h4>Support</h4>
+                            <ul>
+                                <li><a href="donation.html">Donate</a></li>
+                                <li><a href="#">Volunteer</a></li>
+                                <li><a href="#">Partnership</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <div class="footer-divider"></div>
+                    <p>&copy; 2025 Bharatiya Vidvat Parishat. All rights reserved. | Advancing scholarship since 2009</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeLoginModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <h3>Bharati Portal Access</h3>
+                <p>Sign in to access scholarly resources</p>
+            </div>
+            
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="username">
+                        <i class="fas fa-user"></i>
+                        Username or Email
+                    </label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">
+                        <i class="fas fa-lock"></i>
+                        Password
+                    </label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        Remember me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-full">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Sign In
+                </button>
+                
+                <div class="register-link">
+                    <p>New to our community? <a href="#">Request Access</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+<script>// Search Functionality
+// Search Functionality with Smooth Animations
+function addAcademicSearch() {
+    const searchContainer = document.createElement('div');
+    searchContainer.className = 'academic-search';
+    searchContainer.innerHTML = `
+        <div class="search-wrapper">
+            <input type="text" placeholder="Search publications, scholars..." 
+                   id="academicSearch" class="search-input">
+            <button type="button" class="search-btn">
+                <i class="fas fa-search"></i>
+            </button>
+            <ul class="suggestions-list" id="suggestionsList"></ul>
+        </div>
+        <div class="modal-overlay" id="modalOverlay">
+            <div class="modal-box" id="modalBox">
+                <span class="modal-close" id="modalClose">&times;</span>
+                <div class="modal-content" id="modalContent"></div>
+            </div>
+        </div>
+    `;
+
+    const searchStyles = `
+        .academic-search {
+            position: fixed;
+            top: 50%;
+            right: 30px;
+            transform: translateY(-50%);
+            z-index: 1000;
+        }
+
+        .search-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-direction: column;
+        }
+
+        .search-input {
+            width: 0;
+            padding: 10px 0;
+            border: 2px solid #e9ecef;
+            border-radius: 25px;
+            font-family: 'Crimson Text', serif;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            outline: none;
+            margin-right: 5px;
+            overflow: hidden;
+        }
+
+        .search-input.expanded {
+            width: 200px;
+            padding: 10px 15px;
+            opacity: 1;
+        }
+
+        .search-input:focus {
+            border-color: #8b4513;
+            box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.1);
+        }
+
+        .search-btn {
+            background: #8b4513;
+            border: none;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(139, 69, 19, 0.3);
+            flex-shrink: 0;
+        }
+
+        .search-btn:hover {
+            background: #a0522d;
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(139, 69, 19, 0.4);
+        }
+
+        .search-btn:active {
+            transform: scale(0.95);
+        }
+
+        .search-btn i {
+            font-size: 14px;
+            transition: transform 0.3s ease;
+        }
+
+        .search-wrapper.active .search-btn i {
+            transform: rotate(90deg);
+        }
+
+        .suggestions-list {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    max-height: 240px;
+    overflow-y: auto;
+    
+    border: 1px solid #d4c4b4;
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 4px 0;
+    margin: 0;
+    z-index: 1001;
+    font-family: 'Crimson Text', serif;
+    font-size: 15px;
+    transition: opacity 0.3s ease;
+    scrollbar-width: thin;
+    scrollbar-color: #c2a88f #f9f5f0;
+}
+
+.suggestions-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.suggestions-list::-webkit-scrollbar-track {
+    background: #f9f5f0;
+}
+
+.suggestions-list::-webkit-scrollbar-thumb {
+    background-color: #c2a88f;
+    border-radius: 3px;
+}
+
+.suggestions-list li {
+    padding: 10px 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    border-bottom: 1px solid #f2e8dc;
+}
+
+.suggestions-list li:last-child {
+    border-bottom: none;
+}
+
+.suggestions-list li:hover {
+    background-color: #f7ede2;
+    transform: translateX(2px);
+    font-weight: 500;
+    color: #5c3d2e;
+}
+
+       .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+    display: none;
+    z-index: 2000;
+    margin-left:-60%;
+}
+
+.modal-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #807575ff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    font-family: 'Times New Roman', serif;
+    animation: fadeIn 0.3s ease-out;
+    margin-left:-100%;
+    margin-top:-20%;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #ff0000ff;
+}
+
+.modal-content {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+@keyframes fadeIn {
+    from { transform: translate(-50%, -50%) scale(0.95); opacity: 0; }
+    to { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+
+
+        @media (max-width: 768px) {
+            .academic-search { display: none; }
+        }
+    `;
+
+    const styleSheet = document.createElement('style');
+    styleSheet.textContent = searchStyles;
+    document.head.appendChild(styleSheet);
+    document.body.appendChild(searchContainer);
+
+    const searchBtn = searchContainer.querySelector('.search-btn');
+    const searchInput = searchContainer.querySelector('.search-input');
+    const searchWrapper = searchContainer.querySelector('.search-wrapper');
+    const suggestionsList = searchContainer.querySelector('#suggestionsList');
+    const modalOverlay = searchContainer.querySelector('#modalOverlay');
+    const modalBox = searchContainer.querySelector('#modalBox');
+    const modalContent = searchContainer.querySelector('#modalContent');
+    const modalClose = searchContainer.querySelector('#modalClose');
+
+    let isExpanded = false;
+    let scholarData = [];
+
+    // Load CSV data
+    function loadCSVData() {
+        Papa.parse('AIOC_Abstract_form_data.csv', {
+            download: true,
+            header: true,
+            complete: function(results) {
+                scholarData = results.data;
+            },
+            error: function(err) {
+                console.error("CSV load error:", err);
+            }
+        });
+    }
+
+    loadCSVData();
+
+    // Event listeners
+    searchBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        toggleSearch();
+    });
+
+    searchWrapper.addEventListener('mouseenter', function() {
+        if (!isExpanded) expandSearch();
+    });
+
+    searchWrapper.addEventListener('mouseleave', function() {
+        if (isExpanded && !searchInput.value && document.activeElement !== searchInput) {
+            collapseSearch();
+        }
+    });
+
+    searchInput.addEventListener('focus', function() {
+        expandSearch();
+    });
+
+    searchInput.addEventListener('blur', function() {
+        setTimeout(() => {
+            if (!searchInput.value && !searchWrapper.matches(':hover')) {
+                collapseSearch();
+                suggestionsList.innerHTML = '';
+            }
+        }, 100);
+    });
+
+    searchInput.addEventListener('input', function() {
+        const query = searchInput.value.toLowerCase();
+        suggestionsList.innerHTML = '';
+
+        if (!query) return;
+
+        const matches = scholarData.filter(item =>
+            item['Name of The Scholar']?.toLowerCase().includes(query) ||
+            item['Title of the paper']?.toLowerCase().includes(query)
+        ).slice(0, 10);
+
+        matches.forEach(match => {
+            const li = document.createElement('li');
+            li.textContent = `📘 ${match['Title of the paper']} — 👤 ${match['Name of The Scholar']}`;
+            li.addEventListener('click', () => {
+                showScholarDetails(match);
+                suggestionsList.innerHTML = '';
+                searchInput.value = '';
+                collapseSearch();
+            });
+            suggestionsList.appendChild(li);
+        });
+    });
+
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') performAcademicSearch();
+    });
+
+    modalClose.addEventListener('click', () => {
+        modalOverlay.style.display = 'none';
+    });
+
+    function expandSearch() {
+        searchInput.classList.add('expanded');
+        searchWrapper.classList.add('active');
+        isExpanded = true;
+    }
+
+    function collapseSearch() {
+        searchInput.classList.remove('expanded');
+        searchWrapper.classList.remove('active');
+        isExpanded = false;
+    }
+
+    function toggleSearch() {
+        if (isExpanded) {
+            if (searchInput.value) {
+                performAcademicSearch();
+            } else {
+                collapseSearch();
+            }
+        } else {
+            expandSearch();
+            setTimeout(() => searchInput.focus(), 200);
+        }
+    }
+
+        function performAcademicSearch() {
+        const searchTerm = searchInput.value.trim().toLowerCase();
+        if (!searchTerm) return;
+
+        const match = scholarData.find(item =>
+            item['Name of The Scholar']?.toLowerCase() === searchTerm ||
+            item['Title of the paper']?.toLowerCase() === searchTerm
+        );
+
+        if (match) {
+            showScholarDetails(match);
+        } else {
+            modalContent.innerHTML = `<strong>No match found for:</strong> ${searchTerm}`;
+            modalOverlay.style.display = 'flex';
+        }
+    }
+
+    function showScholarDetails(data) {
+        modalContent.innerHTML = `
+            <h3 style="margin-top:0;">📘 ${data['Title of the paper']}</h3>
+            <p><strong>👤 Scholar:</strong> ${data['Name of The Scholar']}</p>
+            <p><strong>📧 Email:</strong> ${data['Email']}</p>
+            <p><strong>🚻 Gender:</strong> ${data['Gender']}</p>
+            <p><strong>🎓 Guide:</strong> ${data['Guide Name']}</p>
+            <p><strong>🆔 Submission ID:</strong> ${data['Submission Id']}</p>
+            <p><strong>🎓 Qualification:</strong> ${data['Qualification']}</p>
+            <p><strong>🌍 Nationality:</strong> ${data['Nationality']}</p>
+        `;
+        modalOverlay.style.display = 'flex';
+    }
+}
+</script>
+    <script src="main.js"></script>
+</body>
+</html>

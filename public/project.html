@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Bharatiya Vidvat Parishat</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="cropped_circle_image.png">
+</head>
+
+<body>
+    <!-- Header -->
+  <header class="header" style="background: linear-gradient(90deg, #2c2a4a, #bfa76f); color: #fff; border-bottom: 2px solid #a67c52;">
+    <div class="container" style="padding: 10px 0;">
+        <nav class="nav-container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+            <div class="logo-section" style="display: flex; align-items: center;">
+                <img src="cropped_circle_image.png" alt="BVP Logo" class="logo-img" >
+                <div class="logo-text">
+                    <h1 style="font-size: 2.5em; margin: 0; color: #fff;">Bharatiya Vidvat Parishat</h1>
+                    <p class="tagline" style="text-align: center; font-style: italic; color: #f0e6d2;">Preserving Knowledge, Inspiring Wisdom</p>
+                </div>
+            </div>
+                <script>window.addEventListener("scroll", function () {
+  const header = document.querySelector(".header");
+  header.classList.toggle("scrolled", window.scrollY > 50);
+});
+
+</script>
+<!-- Add this button inside the header, after the nav-container -->
+<div class="donation-cta-container">
+    <a href="donation.html" class="donation-cta-btn">
+        <span class="donation-icon">
+            
+        </span>
+        <span class="donation-text">Donate Now</span>
+        <div class="pulse-ring"></div>
+        <div class="pulse-ring-2"></div>
+    </a>
+</div>
+             <!-- Navigation Menu -->
+            <ul class="nav-menu" style="list-style: none; display: flex; gap: 15px; margin: 0; padding: 0;">
+                <li><a href="index.html" style="color: #fff; text-decoration: none;">Home</a></li>
+                <li><a href="index.html#about" style="color: #fff; text-decoration: none;">About</a></li>
+                <li><a href="pgm.html" style="color: #fff; text-decoration: none;">Programs</a></li>
+                <li><a href="team.html" style="color: #fff; text-decoration: none;">Esteemed Members</a></li>
+                <li><a href="project.html" style="color: #fff; text-decoration: none;">Projects</a></li>
+                <li><a href="gallery.html" style="color: #fff; text-decoration: none;">Archives</a></li>
+                <li><a href="main.html" style="color: #fff; text-decoration: none;">Forum</a></li>
+                <li><a href="donation.html" style="color: #fff; text-decoration: none;">Support</a></li>
+                <li><a href="contact.html" style="color: #fff; text-decoration: none;">Contact</a></li>
+            </ul>
+                
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header"style="background: linear-gradient(135deg, #f7ecd0, #e8d4a2); padding: 60px 0; border-bottom: 2px solid #c2a46c;">
+        <div class="container" style="margin-top: 13%;">
+            <div class="page-header-content">
+                <nav class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>Projects</span>
+                </nav>
+                <h1>Research Projects & Initiatives</h1>
+                <p>Advancing scholarship through collaborative research and academic excellence</p>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Filter Section -->
+    <section class="section project-filter-section"style="background: linear-gradient(135deg, #f0e5e5, #fdfaf5); padding: 60px 0; border-top: 2px solid #b89f9f; border-bottom: 2px solid #b89f9f;">
+        <div class="container">
+            <div class="filter-controls">
+                <h2>Filter Projects</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">
+                        <i class="fas fa-list"></i>
+                        All Projects
+                    </button>
+                    <button class="filter-btn" data-filter="ongoing">
+                        <i class="fas fa-play-circle"></i>
+                        Ongoing
+                    </button>
+                    <button class="filter-btn" data-filter="completed">
+                        <i class="fas fa-check-circle"></i>
+                        Completed
+                    </button>
+                    <button class="filter-btn" data-filter="upcoming">
+                        <i class="fas fa-clock"></i>
+                        Upcoming
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects-section"style="background: linear-gradient(135deg, #f0e5e5, #fdfaf5); padding: 60px 0; border-top: 2px solid #b89f9f; border-bottom: 2px solid #b89f9f;">
+        <div class="container">
+            <div class="projects-grid">
+                <!-- No Projects Messages -->
+                <div class="no-projects-message active" id="allProjectsMessage">
+                    <div class="no-projects-content">
+                        <i class="fas fa-folder-open"></i>
+                        <h3>No Projects Currently Available</h3>
+                        <p>We are currently planning and developing new research initiatives. Please check back soon for upcoming projects or submit your research proposal below.</p>
+                    </div>
+                </div>
+
+                <div class="no-projects-message" id="ongoingProjectsMessage">
+                    <div class="no-projects-content">
+                        <i class="fas fa-play-circle"></i>
+                        <h3>No Ongoing Projects</h3>
+                        <p>There are currently no ongoing projects. We are actively reviewing proposals and will announce new initiatives soon.</p>
+                    </div>
+                </div>
+
+                <div class="no-projects-message" id="completedProjectsMessage">
+                    <div class="no-projects-content">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>No Completed Projects</h3>
+                        <p>Project archives will be displayed here once we have completed research initiatives to showcase.</p>
+                    </div>
+                </div>
+
+                <div class="no-projects-message" id="upcomingProjectsMessage">
+                    <div class="no-projects-content">
+                        <i class="fas fa-clock"></i>
+                        <h3>No Upcoming Projects</h3>
+                        <p>Stay tuned for announcements about upcoming research projects and collaborative initiatives.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Submit Your Idea Section -->
+    <section class="section submit-idea-section">
+        <div class="container">
+            <div class="submit-idea-header">
+                <h2>Submit Your Research Proposal</h2>
+                <p>Have a research idea that aligns with our mission? Submit your proposal to BVP and let us evaluate whether we can provide funding and support for your scholarly endeavor.</p>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="idea-submission-grid">
+                <!-- Submission Information Panel -->
+                <div class="submission-info-panel">
+                    <div class="info-header">
+                        <h3>Submission Guidelines</h3>
+                    </div>
+                    
+                    <div class="criteria-list">
+                        <div class="criteria-item">
+                            <div class="criteria-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="criteria-content">
+                                <h4>Research Relevance</h4>
+                                <p>Your proposal should align with Indian classical studies, Sanskrit literature, philosophy, or related interdisciplinary fields.</p>
+                            </div>
+                        </div>
+
+                        <div class="criteria-item">
+                            <div class="criteria-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="criteria-content">
+                                <h4>Academic Merit</h4>
+                                <p>Demonstrate clear research objectives, methodology, and potential contribution to the field of knowledge.</p>
+                            </div>
+                        </div>
+
+                        <div class="criteria-item">
+                            <div class="criteria-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="criteria-content">
+                                <h4>Community Impact</h4>
+                                <p>Show how your research will benefit the academic community and preserve or advance cultural knowledge.</p>
+                            </div>
+                        </div>
+
+                        <div class="criteria-item">
+                            <div class="criteria-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="criteria-content">
+                                <h4>Timeline & Feasibility</h4>
+                                <p>Provide realistic timelines and demonstrate the feasibility of your research proposal.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+
+                <!-- Submission Form Panel -->
+                <div class="submission-form-panel">
+                    <div class="form-header">
+                        <h3>Project Proposal Form</h3>
+                        <p>Please fill out all required fields to submit your research proposal for review.</p>
+                    </div>
+
+                  <!--   <form class="proposal-form" id="ideaSubmissionForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="researcher_name">
+                                    <i class="fas fa-user"></i>
+                                    Full Name *
+                                </label>
+                                <input type="text" id="researcher_name" name="researcher_name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="researcher_email">
+                                    <i class="fas fa-envelope"></i>
+                                    Email Address *
+                                </label>
+                                <input type="email" id="researcher_email" name="researcher_email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="researcher_phone">
+                                    <i class="fas fa-phone"></i>
+                                    Phone Number
+                                </label>
+                                <input type="tel" id="researcher_phone" name="researcher_phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="researcher_affiliation">
+                                    <i class="fas fa-university"></i>
+                                    Institutional Affiliation
+                                </label>
+                                <input type="text" id="researcher_affiliation" name="researcher_affiliation">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="project_title">
+                                <i class="fas fa-heading"></i>
+                                Project Title *
+                            </label>
+                            <input type="text" id="project_title" name="project_title" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="research_category">
+                                <i class="fas fa-tags"></i>
+                                Research Category *
+                            </label>
+                            <select id="research_category" name="research_category" required>
+                                <option value="">Select a category</option>
+                                <option value="sanskrit">Sanskrit Studies</option>
+                                <option value="philosophy">Indian Philosophy</option>
+                                <option value="vedic">Vedic Studies</option>
+                                <option value="literature">Classical Literature</option>
+                                <option value="history">Historical Research</option>
+                                <option value="linguistics">Linguistics</option>
+                                <option value="interdisciplinary">Interdisciplinary Studies</option>
+                                <option value="digital">Digital Humanities</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="project_abstract">
+                                <i class="fas fa-file-alt"></i>
+                                Project Abstract *
+                            </label>
+                            <textarea id="project_abstract" name="project_abstract" rows="6" placeholder="Provide a detailed abstract of your research proposal, including objectives, methodology, and expected outcomes..." required></textarea>
+                            <span class="char-counter">0/1000 words</span>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="project_duration">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    Expected Duration *
+                                </label>
+                                <select id="project_duration" name="project_duration" required>
+                                    <option value="">Select duration</option>
+                                    <option value="6-months">6 months</option>
+                                    <option value="1-year">1 year</option>
+                                    <option value="18-months">18 months</option>
+                                    <option value="2-years">2 years</option>
+                                    <option value="more">More than 2 years</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="funding_amount">
+                                    <i class="fas fa-rupee-sign"></i>
+                                    Estimated Budget (INR)
+                                </label>
+                                <select id="funding_amount" name="funding_amount">
+                                    <option value="">Select range</option>
+                                    <option value="under-50k">Under ₹50,000</option>
+                                    <option value="50k-1l">₹50,000 - ₹1,00,000</option>
+                                    <option value="1l-2l">₹1,00,000 - ₹2,00,000</option>
+                                    <option value="2l-5l">₹2,00,000 - ₹5,00,000</option>
+                                    <option value="above-5l">Above ₹5,00,000</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" required>
+                                I confirm that this research proposal is original and aligns with BVP's mission of preserving and advancing Indian classical knowledge systems.
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox">
+                                I would like to receive updates about BVP's research initiatives and funding opportunities.
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i>
+                            Submit Proposal
+                        </button>
+                    </form>-->
+
+<a href="https://script.google.com/macros/s/AKfycbxj9IJ7A6ls7zhscuNhXaMp1xLsU7NjDa_A8HFFMHErQSAJG00Qji7bBT74N10B25SmnA/exec
+               " 
+         target="_blank" 
+         class="donate-button"
+         style="margin-left: 90px;">
+        Click Here to Submit Your Idea
+      </a>
+<br>
+<div class="funding-info" style="margin-top: 40px;">
+                        <div class="funding-icon">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <div class="funding-content">
+                            <h4>Funding Consideration</h4>
+                            <p>Selected proposals may receive financial support, mentorship, and institutional backing from BVP based on merit and available resources.</p>
+                        </div>
+                    </div>
+                     </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <h3>Bharatiya Vidvat Parishat</h3>
+                        <p>Where India's intellectual heritage meets contemporary scholarship</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=61566947941220" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://x.com/BVP_2025" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/bharatiya-vidwat-parishat-781703381/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://www.instagram.com/bvpprograms/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://youtube.com/@bharatiyavidwatparishatbangalo?si=SBZauZfY3qu4lH8W" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h4>Academic</h4>
+                            <ul>
+                                <li><a href="index.html#about">About Us</a></li>
+                                <li><a href="pgm.html">Programs</a></li>
+                                <li><a href="project.html">Research</a></li>
+                                <li><a href="gallery.html">Archives</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-column">
+                            <h4>Resources</h4>
+                            <ul>
+                                <li><a href="https://aioc.bvparishat.in/">AIOC</a></li>
+                                <li><a href="https://bharati.bvparishat.in/">Bharati Portal</a></li>
+                                <li><a href="#">Publications</a></li>
+                                <li><a href="#">Research Papers</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-column">
+                            <h4>Community</h4>
+                            <ul>
+                                <li><a href="main.html">Discussion Forum</a></li>
+                                <li><a href="#">Events</a></li>
+                                <li><a href="#">Membership</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-column">
+                            <h4>Support</h4>
+                            <ul>
+                                <li><a href="donation.html">Donate</a></li>
+                                <li><a href="#">Volunteer</a></li>
+                                <li><a href="#">Partnership</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <div class="footer-divider"></div>
+                    <p>&copy; 2025 Bharatiya Vidvat Parishat. All rights reserved. | Advancing scholarship since 2009</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        // Project Filter Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const noProjectsMessages = document.querySelectorAll('.no-projects-message');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Hide all messages first
+                    noProjectsMessages.forEach(message => {
+                        message.classList.remove('active');
+                    });
+                    
+                    // Show the appropriate message based on filter
+                    let messageToShow;
+                    switch(filterValue) {
+                        case 'all':
+                            messageToShow = document.getElementById('allProjectsMessage');
+                            break;
+                        case 'ongoing':
+                            messageToShow = document.getElementById('ongoingProjectsMessage');
+                            break;
+                        case 'completed':
+                            messageToShow = document.getElementById('completedProjectsMessage');
+                            break;
+                        case 'upcoming':
+                            messageToShow = document.getElementById('upcomingProjectsMessage');
+                            break;
+                    }
+                    
+                    if (messageToShow) {
+                        messageToShow.classList.add('active');
+                    }
+                });
+            });
+            
+            // Word counter for project abstract
+            const abstractTextarea = document.getElementById('project_abstract');
+            const charCounter = document.querySelector('.char-counter');
+            
+            if (abstractTextarea && charCounter) {
+                abstractTextarea.addEventListener('input', function() {
+                    const words = this.value.trim().split(/\s+/).filter(word => word.length > 0).length;
+                    charCounter.textContent = `${words}/1000 words`;
+                    
+                    if (words > 1000) {
+                        charCounter.style.color = '#dc3545';
+                    } else {
+                        charCounter.style.color = '#6c757d';
+                    }
+                });
+            }
+            
+            // Form submission handler
+            const ideaForm = document.getElementById('ideaSubmissionForm');
+            if (ideaForm) {
+                ideaForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Thank you for your submission! Our review panel will evaluate your proposal and contact you within 2-3 weeks.');
+                    ideaForm.reset();
+                    if (charCounter) {
+                        charCounter.textContent = '0/1000 words';
+                        charCounter.style.color = '#6c757d';
+                    }
+                });
+            }
+        });
+    </script>
+    
+    <style>
+        /* No Projects Message */
+        .no-projects-message {
+            display: none;
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border-radius: 12px;
+            border: 2px dashed #dee2e6;
+            margin: 2rem 0;
+            animation: fadeInUp 0.5s ease;
+        }
+
+        .no-projects-message.active {
+            display: block;
+        }
+
+        .no-projects-content {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .no-projects-content i {
+            font-size: 4rem;
+            color: #d4750a;
+            margin-bottom: 1.5rem;
+            opacity: 0.7;
+        }
+
+        .no-projects-content h3 {
+            font-family: 'Libre Baskerville', serif;
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .no-projects-content p {
+            color: #6c757d;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        /* Submit Idea Section */
+        .submit-idea-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .submit-idea-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .submit-idea-header h2 {
+            font-family: 'Libre Baskerville', serif;
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .submit-idea-header p {
+            color: #6c757d;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        .section-divider {
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #d4750a 0%, #e68a1e 100%);
+            margin: 0 auto;
+        }
+
+        .idea-submission-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        /* Submission Information Panel */
+        .submission-info-panel {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            height: fit-content;
+        }
+
+        .info-header h3 {
+            font-family: 'Libre Baskerville', serif;
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .criteria-list {
+            margin-bottom: 2rem;
+        }
+
+        .criteria-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #d4750a;
+        }
+
+        .criteria-icon {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background: rgba(212, 117, 10, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #d4750a;
+            font-size: 1.1rem;
+        }
+
+        .criteria-content h4 {
+            color: #2c3e50;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .criteria-content p {
+            color: #6c757d;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .funding-info {
+            display: flex;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, rgba(212, 117, 10, 0.05) 0%, rgba(212, 117, 10, 0.1) 100%);
+            border-radius: 8px;
+            border: 1px solid rgba(212, 117, 10, 0.2);
+        }
+
+        .funding-icon {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background: #d4750a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.1rem;
+        }
+
+        .funding-content h4 {
+            color: #2c3e50;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .funding-content p {
+            color: #6c757d;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* Submission Form Panel */
+        .submission-form-panel {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-header {
+            margin-bottom: 2rem;
+        }
+
+        .form-header h3 {
+            font-family: 'Libre Baskerville', serif;
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-header p {
+            color: #6c757d;
+            font-size: 0.95rem;
+        }
+
+        .proposal-form .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .proposal-form label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .proposal-form label i {
+            color: #d4750a;
+            width: 16px;
+        }
+
+        .proposal-form input,
+        .proposal-form select,
+        .proposal-form textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            font-family: inherit;
+            box-sizing: border-box;
+        }
+
+        .proposal-form input:focus,
+        .proposal-form select:focus,
+        .proposal-form textarea:focus {
+            outline: none;
+            border-color: #d4750a;
+            box-shadow: 0 0 0 3px rgba(212, 117, 10, 0.1);
+        }
+
+        .proposal-form textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .char-counter {
+            color: #6c757d;
+            font-size: 0.8rem;
+            margin-top: 0.25rem;
+            display: block;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .checkbox-label {
+            display: flex !important;
+            align-items: flex-start !important;
+            gap: 0.75rem !important;
+            cursor: pointer;
+            font-weight: normal !important;
+            line-height: 1.5;
+        }
+
+        .checkbox-label input[type="checkbox"] {
+            width: auto !important;
+            margin: 0;
+            transform: scale(1.2);
+            flex-shrink: 0;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #d4750a 0%, #e68a1e 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #b8640a 0%, #d4750a 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 117, 10, 0.3);
+        }
+
+        .btn-full {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 1rem;
+        }
+
+        /* Project Filter Section */
+        .project-filter-section {
+            padding: 2rem 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .filter-controls {
+            text-align: center;
+        }
+
+        .filter-controls h2 {
+            font-family: 'Libre Baskerville', serif;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: white;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            color: #6c757d;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.875rem;
+            letter-spacing: 0.5px;
+        }
+
+        .filter-btn:hover {
+            border-color: #d4750a;
+            color: #d4750a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 117, 10, 0.2);
+        }
+
+        .filter-btn.active {
+            background: #d4750a;
+            border-color: #d4750a;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 117, 10, 0.3);
+        }
+
+        /* Projects Grid */
+        .projects-section {
+            padding: 4rem 0;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Responsive Design for Submit Idea Section */
+        @media (max-width: 768px) {
+            .idea-submission-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+            
+            .submit-idea-header h2 {
+                font-size: 2rem;
+            }
+            
+            .criteria-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.75rem;
+            }
+            
+            .funding-info {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.75rem;
+            }
+
+            .filter-buttons {
+                justify-content: center;
+                gap: 0.5rem;
+            }
+            
+            .filter-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.75rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .filter-controls h2 {
+                font-size: 1.5rem;
+            }
+            
+            .filter-buttons {
+                flex-direction: column;
+                align-items: center;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+            
+            .filter-btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .submit-idea-header h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Animation for project cards when filtering */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Active navigation link styling */
+        .nav-menu a.active {
+            color: #d4750a;
+            font-weight: 600;
+        }
+        </style></body></html>

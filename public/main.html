@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharatiya Vidvat Parishat</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="cropped_circle_image.png">
+
+    <title>Discussion Forum - Bharatiya Vidvat Parishat</title>
+    
+    <style>
+        
+
+        .site-title {
+            color: #8B4513;
+            font-size: 32px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .forum-title {
+            font-size: 42px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .forum-subtitle {
+            font-size: 18px;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        /* Form Section */
+        .form-section {
+            background: #fff;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+            border-top: 4px solid #C4824A;
+        }
+
+        .form-section h3 {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        label {
+            display: block;
+            color: #555;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            background: #fafafa;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #C4824A;
+            background: #fff;
+            box-shadow: 0 0 0 3px rgba(196, 130, 74, 0.1);
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #C4824A 0%, #8B4513 100%);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            margin: 30px auto 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(196, 130, 74, 0.3);
+        }
+
+        /* Messages Section */
+        .messages-section {
+            background: #fff;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-top: 4px solid #C4824A;
+        }
+
+        .messages-section h3 {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .message {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .message:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .message-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .message-author {
+            font-weight: 700;
+            color: #C4824A;
+            font-size: 16px;
+        }
+
+        .message-date {
+            color: #6c757d;
+            font-size: 12px;
+            font-style: italic;
+        }
+
+        .message-content {
+            color: #495057;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .message-actions {
+            margin-top: 15px;
+            text-align: right;
+        }
+
+        .reply-btn {
+            background: #6c757d;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .reply-btn:hover {
+            background: #5a6268;
+        }
+
+        .replies {
+            margin-left: 30px;
+            margin-top: 20px;
+            border-left: 3px solid #C4824A;
+            padding-left: 20px;
+        }
+
+        .reply {
+            background: #f1f3f4;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 3px solid #C4824A;
+        }
+
+        .empty-state {
+            text-align: center;
+            color: #6c757d;
+            font-style: italic;
+            padding: 40px 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+           
+
+            .forum-title {
+                font-size: 32px;
+            }
+
+            .form-section,
+            .messages-section {
+                padding: 25px;
+                margin: 0 10px 30px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .replies {
+                margin-left: 15px;
+                padding-left: 15px;
+            }
+        }
+
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message {
+            animation: fadeInUp 0.5s ease forwards;
+        }
+    </style>
+    </head>
+<body>
+       <!-- Header -->
+    <header class="header" style="background: linear-gradient(90deg, #2c2a4a, #bfa76f); color: #fff; border-bottom: 2px solid #a67c52;">
+    <div class="container" style="padding: 10px 0;">
+        <nav class="nav-container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+            <div class="logo-section" style="display: flex; align-items: center;">
+                <img src="cropped_circle_image.png" alt="BVP Logo" class="logo-img" >
+                <div class="logo-text">
+                    <h1 style="font-size: 2.5em; margin: 0; color: #fff;">Bharatiya Vidvat Parishat</h1>
+                    <p class="tagline" style="text-align: center; font-style: italic; color: #f0e6d2;">Preserving Knowledge, Inspiring Wisdom</p>
+                </div>
+            </div>
+                <script>window.addEventListener("scroll", function () {
+  const header = document.querySelector(".header");
+  header.classList.toggle("scrolled", window.scrollY > 50);
+});
+
+</script>
+<!-- Add this button inside the header, after the nav-container -->
+<div class="donation-cta-container">
+    <a href="donation.html" class="donation-cta-btn">
+        <span class="donation-icon">
+            
+        </span>
+        <span class="donation-text">Donate Now</span>
+        <div class="pulse-ring"></div>
+        <div class="pulse-ring-2"></div>
+    </a>
+</div>
+             <!-- Navigation Menu -->
+            <ul class="nav-menu" style="list-style: none; display: flex; gap: 15px; margin: 0; padding: 0;">
+                <li><a href="index.html" style="color: #fff; text-decoration: none;">Home</a></li>
+                <li><a href="index.html#about" style="color: #fff; text-decoration: none;">About</a></li>
+                <li><a href="pgm.html" style="color: #fff; text-decoration: none;">Programs</a></li>
+                <li><a href="team.html" style="color: #fff; text-decoration: none;">Esteemed Members</a></li>
+                <li><a href="project.html" style="color: #fff; text-decoration: none;">Projects</a></li>
+                <li><a href="gallery.html" style="color: #fff; text-decoration: none;">Archives</a></li>
+                <li><a href="main.html" style="color: #fff; text-decoration: none;">Forum</a></li>
+                <li><a href="donation.html" style="color: #fff; text-decoration: none;">Support</a></li>
+                <li><a href="contact.html" style="color: #fff; text-decoration: none;">Contact</a></li>
+            </ul>
+                
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container" style="margin-top: 15%;"style="background: linear-gradient(135deg, #f3e8dc, #e7cfc0); padding: 60px 0; border-top: 2px solid #b88c6b; border-bottom: 2px solid #b88c6b;">
+        <!-- Forum Header -->
+        <div class="forum-header">
+            <h1 class="forum-title" style="font-family: 'Times New Roman', Times, serif;text-align: center;">Discussion Forum</h1>
+            <p class="forum-subtitle" style="font-family: 'Times New Roman', Times, serif;text-align: center;">Share your thoughts and engage with our scholarly community</p>
+      </div>
+
+        <!-- Post Form -->
+        <div class="form-section">
+            <h3>Start a New Discussion</h3>
+            <form id="postForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="your.email@example.com" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="+91 XXXXX XXXXX" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" placeholder="Share your thoughts, questions, or insights with the community..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Post Message</button>
+            </form>
+        </div>
+
+        <!-- Messages Display -->
+        <div class="messages-section">
+            <h3>Community Discussions</h3>
+            <div id="messages">
+                <div class="empty-state">
+                    <p>No discussions yet. Be the first to start a conversation!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <script>
+    const form = document.getElementById('postForm');
+    const messagesDiv = document.getElementById('messages');
+
+    async function loadMessages() {
+      const res = await fetch('/api/messages');
+      const messages = await res.json();
+      messagesDiv.innerHTML = '';
+      messages.forEach(msg => renderMessage(msg));
+    }
+
+    function renderMessage(msg, depth = 0) {
+      const div = document.createElement('div');
+      div.className = 'message';
+      div.style.marginLeft = `${depth * 20}px`;
+
+      const likes = msg.likedBy?.length || 0;
+      const dislikes = msg.dislikedBy?.length || 0;
+
+      div.innerHTML = `
+        <p><strong>${msg.name}</strong> (${msg.email}, ${msg.phone})</p>
+        <p>${msg.message}</p>
+        <button onclick="react('${msg.id}', 'like', '${msg.email}', this)">👍 ${likes}</button>
+        <button onclick="react('${msg.id}', 'dislike', '${msg.email}', this)">👎 ${dislikes}</button>
+        <button onclick="showReplyForm('${msg.id}', this)">Reply</button>
+        <div class="replies"></div>
+      `;
+
+      messagesDiv.appendChild(div);
+
+      const repliesDiv = div.querySelector('.replies');
+      msg.replies?.forEach(reply => {
+        renderNestedReply(reply, repliesDiv, depth + 1);
+      });
+    }
+
+    function renderNestedReply(reply, container, depth) {
+      const div = document.createElement('div');
+      div.className = 'message';
+      div.style.marginLeft = `${depth * 20}px`;
+
+      const likes = reply.likedBy?.length || 0;
+      const dislikes = reply.dislikedBy?.length || 0;
+
+      div.innerHTML = `
+        <p><strong>${reply.name}</strong> (${reply.email})</p>
+        <p>${reply.message}</p>
+        <button onclick="react('${reply.id}', 'like', '${reply.email}', this)">👍 ${likes}</button>
+        <button onclick="react('${reply.id}', 'dislike', '${reply.email}', this)">👎 ${dislikes}</button>
+        <button onclick="showReplyForm('${reply.id}', this)">Reply</button>
+        <div class="replies"></div>
+      `;
+
+      container.appendChild(div);
+
+      const repliesDiv = div.querySelector('.replies');
+      reply.replies?.forEach(r => renderNestedReply(r, repliesDiv, depth + 1));
+    }
+
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      const newMsg = {
+        id: crypto.randomUUID(),
+        name: form.name.value,
+        email: form.email.value,
+        phone: form.phone.value,
+        message: form.message.value,
+        likedBy: [],
+        dislikedBy: [],
+        replies: []
+      };
+      await fetch('/api/messages', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newMsg)
+      });
+      form.reset();
+      loadMessages();
+    });
+
+    async function react(id, type, email, btn) {
+      await fetch('/api/react', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id, email, type })
+      });
+      loadMessages();
+    }
+
+    function showReplyForm(parentId, btn) {
+      const replyForm = document.createElement('div');
+      replyForm.innerHTML = `
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your reply..." required></textarea>
+        <button>Submit Reply</button>
+      `;
+      btn.nextElementSibling.appendChild(replyForm);
+
+      replyForm.querySelector('button').addEventListener('click', async () => {
+        const name = replyForm.querySelector('input[type="text"]').value;
+        const email = replyForm.querySelector('input[type="email"]').value;
+        const message = replyForm.querySelector('textarea').value;
+
+        const reply = {
+          id: crypto.randomUUID(),
+          name,
+          email,
+          message,
+          likedBy: [],
+          dislikedBy: [],
+          replies: []
+        };
+
+        await fetch('/api/reply', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ parentId, reply })
+        });
+
+        loadMessages();
+      });
+    }
+
+    loadMessages();
+  </script>
+</body>
+</html>
