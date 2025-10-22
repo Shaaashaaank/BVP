@@ -1,2 +1,0 @@
-# BVP
-Bharatiya Vidwat Parishat
